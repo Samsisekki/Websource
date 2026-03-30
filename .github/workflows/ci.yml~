@@ -2,7 +2,7 @@ name: Websource CI/CD
 
 on:
   push:
-    branches: [ feature/CI_with_Docker_Hub ]
+    branches: [ main ]
 
 jobs:
   build-and-push:
@@ -20,7 +20,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./Websource
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/hybrid-dr-web:${{ github.sha }}
 
