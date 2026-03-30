@@ -76,7 +76,7 @@
 
         <div class="card" style="border-top-color: #f59e0b;">
             <h3>💾 3. 볼륨 & DB 실시간 동기화</h3>
-            <p>독립된 NFS(On-Prem)와 EFS(AWS) 환경을 구축하고, <b>AWS DMS</b>와 <b>DataSync</b>를 활용해 MySQL DB와 파일 스토리지를 실시간으로 1:1 복제하여 완벽한 Stateful 동기화를 달성했습니다.</p>
+            <p>독립된 NFS(On-Prem)와 EFS(AWS) 환경을 구축하고, <b>AWS DMS</b>와 <b>rsync</b>를 활용해 MySQL DB와 파일 스토리지를 실시간으로 1:1 복제하여 완벽한 Stateful 동기화를 달성했습니다.</p>
         </div>
 
         <div class="card" style="border-top-color: #8b5cf6;">
