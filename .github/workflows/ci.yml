@@ -47,6 +47,10 @@ jobs:
           cd gitops-repo
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Update image tag to ${{ github.sha }} [skip ci]"
-          git push
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update image tag to ${{ github.sha }} [skip ci]"
+            git push
+          else
+            echo "변경 사항 없음 : no commit"
+          fi
