@@ -2,7 +2,7 @@ name: Websource CI/CD
 
 on:
   push:
-    branches: [ feature/CI_with_Docker_Hub ]
+    branches: [ main ]
 
 jobs:
   build-and-push:
