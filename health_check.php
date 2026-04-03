@@ -4,9 +4,9 @@ error_reporting(0);
 
 // 1. K8s 환경변수에서 DB 접속 정보 가져오기 (환경에 맞게 수정 가능)
 $host = getenv('DB_HOST') ?: 'mysql-service'; // 온프레미스 MySQL K8s 서비스명
-$db   = getenv('DB_NAME') ?: 'samsisekki';
+$db   = getenv('DB_NAME') ?: 'dr_test_db';
 $user = getenv('DB_USER') ?: 'root';
-$pass = getenv('DB_PASS') ?: 'password';
+$pass = getenv('DB_PASS') ?: 'password123!';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
